@@ -1,0 +1,100 @@
+{% extends 'user/base.html' %}
+
+{%  block content %}
+
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <p>Home <span>//</span> Blog</p>
+                            <h2>Our Blog</h2>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+
+
+    <!--================Blog Area =================-->
+    <section class="blog_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                        {% for blog in blogs%}
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="{{blog.image.url}}" alt="" style="height: 400px;">
+                                <a href="#" class="blog_item_date">
+                                    <h3>{{blog.updated_on|date:'d'}}</h3>
+                                    <p>{{blog.updated_on|date:'M'}}</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="/blog/detail/{{blog.id}}">
+                                    <h2>{{blog.title}}</h2>
+                                </a>
+                                <p>{{blog.content|truncatewords:50}}</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="far fa-user"></i> {{blog.author}}</a></li>
+                                    <li><a href="#"><i class="far fa-comments"></i> <span class="fb-comments-count" data-href="http://localhost:8000/blog/detail/{{blog.id}}"></span> Comments</a></li>
+                                    <li><a href="#"><i class="far fa-time"></i> {{blog.created_on}}</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        {% endfor %}
+
+                        {% if blogs.has_other_pages %}
+                        <ul class="pagination">
+                            {% if blogs.has_previous %}
+                            <li class="page-item"><a href="?page={{ blogs.previous_page_number }}" class="page-link">&laquo;</a></li>
+                            {% else %}
+                            <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                            {% endif %}
+                            {% for i in blogs.paginator.page_range %}
+                            {% if blogs.number == i %}
+                                <li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+                            {% else %}
+                                <li class="page-item"><a href="?page={{ i }}" class="page-link">{{ i }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                            {% if blogs.has_next %}
+                            <li class="page-item"><a href="?page={{ blogs.next_page_number }}" class="page-link">&raquo;</a></li>
+                            {% else %}
+                            <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Recent Post</h3>
+                            {% for recent_post in recent_posts %}
+                            <div class="media post_item">
+                                <img src="{{recent_post.image.url}}" alt="post" style="height: 40px; width: 40px;">
+                                <div class="media-body">
+                                    <a href="/blog/detail/{{recent_post.id}}">
+                                        <h3>{{recent_post.title}}</h3>
+                                        <p>{{recent_post.content|truncatewords:15}}</p>
+                                    </a>
+                                    <p>{{recent_post.created_on}}</p>
+                                    <hr>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+{% endblock %}

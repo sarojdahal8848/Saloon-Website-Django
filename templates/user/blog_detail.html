@@ -1,0 +1,81 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+
+
+
+   <!-- breadcrumb start-->
+   <section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="breadcrumb_iner text-center">
+                <div class="breadcrumb_iner_item">
+                   <p>HOME <span>//</span>Blog single </p>
+                   <h2>Blog single</h2>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- breadcrumb start-->
+ <!--================Blog Area =================-->
+ <section class="blog_area single-post-area section_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8 posts-list">
+             <div class="single-post">
+                <div class="feature-img">
+                   <img class="img-fluid" src="{{blogs.image.url}}" alt="">
+                </div>
+                <div class="blog_details">
+                   <h2>{{blogs.title}}
+                   </h2>
+                   <ul class="blog-info-link mt-3 mb-4">
+                      <li><a href="#"><i class="far fa-user"></i> {{blogs.author}}</a></li>
+                      <li><a href="#"><i class="far fa-comments"></i><span class="fb-comments-count" data-href="http://localhost:8000/blog/detail/{{blogs.id}}"></span>Comments</a></li>
+                      <li><a href="#"><i class="far fa-calendar"></i> {{blogs.created_on}}</a></li>
+                   </ul>
+                   <p class="excert" align="justify">
+                      {{blogs.content}}
+                   </p>
+                </div>
+             </div>
+             <div class="navigation-top">
+                <div class="d-sm-flex justify-content-between text-center">
+                    <div class="fb-like" data-href="http://localhost:8000/blog/detail/{{blogs.id}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+                   </ul>
+                </div>
+                <div class="navigation-area">
+                   <div class="row">
+                    <div class="fb-comments" data-href="http://localhost:8000/blog/detail/{{blogs.id}}" data-width="100px" data-height="50px;" data-numposts="5"></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-lg-4">
+             <div class="blog_right_sidebar">
+                <aside class="single_sidebar_widget popular_post_widget">
+                    <h3 class="widget_title">Recent Post</h3>
+                    {% for recent_post in recent_posts %}
+                    <div class="media post_item">
+                        <img src="{{recent_post.image.url}}" alt="post" style="height: 40px; width: 40px;">
+                        <div class="media-body">
+                            <a href="/blog/detail/{{recent_post.id}}">
+                                <h3>{{recent_post.title}}</h3>
+                                <p>{{recent_post.content|truncatewords:15}}</p>
+                            </a>
+                            <p>{{recent_post.created_on}}</p>
+                            <hr>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </aside>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!--================Blog Area end =================-->
+{% endblock %}

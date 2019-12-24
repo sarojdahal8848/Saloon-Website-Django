@@ -1,0 +1,173 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Neeldavid</title>
+    <link rel="icon" href="{% static 'user/img/neel/logo.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/owl.carousel.min.css' %}">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/themify-icons.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/flaticon.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/magnific-popup.css' %}">
+    
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/gijgo.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'user/css/all.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'user/css/style.css' %}">
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="/"> <img src="{% static 'user/img/neel/logo.png' %}" alt="logo" style="height: 60px; width:200px;"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/about/">about</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/service/">Services</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/blog/">blog</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/contact/">Contact</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/gallery/">Gallery</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_btn">
+                            <a href="/book/" class="btn_2 d-none d-sm-block">Book Now</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+        {% block content %}
+
+
+        {% endblock %}
+    <!-- footer part start-->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_1">
+                        <h4>About Us</h4>
+                        <p>Heaven fruitful doesn't over for these theheaven fruitful doe over days
+                            appear creeping seasons sad behold beari ath of it fly signs bearing
+                            be one blessed.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Opening Hours</h4>
+                        <div class="contact_info">
+                            <ul>
+                                <li><a href="#">Sunday - Friday : 9 am to 6 pm</a></li>
+                                <li><a href="#"> Saturday : Close</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Contact us</h4>
+                        <div class="contact_info">
+                            <p><span> Address :</span> Central Mall, 2 <sup>nd</sup> Floor , Shop NO. 117 to 121 </p>
+                            <p><span> Phone :</span> 982-9358501</p>
+                            <p><span> Email : </span>info@colorlib.com </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright_part_text">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="copyright_social_icon text-right">
+                            <a href="https://www.facebook.com/sarojrecreation/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="ti-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="{% static 'user/js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'user/js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'user/js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'user/js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'user/js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'user/js/masonry.pkgd.js' %}"></script>
+
+    <!-- contact js -->
+    <script src="{% static 'user/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'user/js/jquery.form.js' %}"></script>
+    <script src="{% static 'user/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'user/js/mail-script.js' %}"></script>
+    <script src="{% static 'user/js/contact.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'user/js/owl.carousel.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'user/js/slick.min.js' %}"></script>
+    <script src="{% static 'user/js/gijgo.min.js' %}"></script>
+    <script src="{% static 'user/js/jquery.nice-select.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'user/js/custom.js' %}"></script>
+</body>
+
+</html>

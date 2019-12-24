@@ -1,0 +1,301 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9">
+                    <div class="banner_text text-center">
+                        <div class="banner_text_iner">
+                            <h3>book <span>now</span> </h3>
+                            <p>Make your Style</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+    <!--::exclusive_item_part start::-->
+    <section class="about_us section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-xl-6">
+                    <div class="section_tittle">
+                        <p>Our Services</p>
+                        <h2>Why Neeldavid ?</h2>
+                        <span>We provide best services to our customers with affordable rates. Customers satisfaction is our main motto.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <div class="our_feature">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="single_feature_item">
+                                    <div class="feature_item_icon">
+                                        <span><img src="{% static 'user/img/neel/spa.png' %}" alt="icon"></span>
+                                    </div>
+                                    <h3><a href="#">Hair Spa</a></h3>
+                                </div>
+                                <div class="single_feature_item">
+                                    <div class="feature_item_icon">
+                                        <span> <img src="{% static 'user/img/neel/haircut.png' %}" alt="icon"> </span>
+                                    </div>
+                                    <h3><a href="#">Hair Cut</a></h3>
+                                </div>
+                                <div class="single_feature_item">
+                                    <div class="feature_item_icon">
+                                        <span> <img src="{% static 'user/img/neel/manicure.png' %}" alt="icon"> </span>
+                                    </div>
+                                    <h3><a href="#">Manicure</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="about_img">
+                        <img src="{% static 'user/img/neel/about.png' %}" alt="#">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="our_feature">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="single_feature_item">
+                                    <div class="feature_item_icon">
+                                        <span> <img src="{% static 'user/img/neel/beauty.png' %}" alt="icon"> </span>
+                                    </div>
+                                    <h3> <a href="#">Beauty and Grooming</a></h3>
+                                    
+                                </div>
+                                <div class="single_feature_item">
+                                    <div class="feature_item_icon">
+                                        <span> <img src="{% static 'user/img/neel/facial.png' %}" alt="icon"> </span>
+                                    </div>
+                                    <h3><a href="">Facial</a></h3>
+                                </div>
+                                <div class="single_feature_item">
+                                    <div class="feature_item_icon">
+                                        <span> <img src="{% static 'user/img/neel/style.png' %}" alt="icon"> </span>
+                                    </div>
+                                    <h3><a href="">Hair Style</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay_icon">
+            <img src="{% static 'user/img/animate_icon/icon_1.png' %}" class="amitated_icon_1" alt="animate_icon">
+            <img src="{% static 'user/img/animate_icon/icon_2.png' %}" class="amitated_icon_2" alt="animate_icon">
+            <img src="{% static 'user/img/animate_icon/icon_3.png' %}" class="amitated_icon_3" alt="animate_icon">
+            <img src="{% static 'user/img/animate_icon/icon_4.png' %}" class="amitated_icon_4" alt="animate_icon">
+            <img src="{% static 'user/img/animate_icon/icon_5.png' %}" class="amitated_icon_5" alt="animate_icon">
+        </div>
+    </section>
+    <!--::exclusive_item_part end::-->
+
+    <!-- extends part start-->
+    {% for saying in sayings%}
+    <section class="extends_part section_padding" style="margin-bottom: 700px;">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-5">
+                    <div class="extends_img">
+                        <img src="{{saying.image.url}}" alt="">
+                        <div class="extends_video">
+                            <div class="intro_video_iner text-center d-flex align-items-center">
+                                <div class="intro_video_icon">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="{{saying.video}}">
+                                        <span class="ti-control-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="extends_member_text">
+                        <h2>What Owner Says</h2> - <b>{{saying.fullname}}</b><br><br>
+                        <p>{{saying.message}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    <!-- team part end-->
+
+    <!--::exclusive_item_part start::-->
+    <section class="our_offer" style="margin-top: 700px;">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-xl-5">
+                    <div class="section_tittle">
+                        <p>Our gallery</p>
+                        <h2>Some Gallery Pictures</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-lg-12">
+                    {% for gallery in gallerys %}
+                    <div class="single_offer_part">
+                        <div class="single_offer">
+                            <img src="{{gallery.image.url}}" alt="offer_img_1" style="height: 400px;">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::exclusive_item_part end::-->
+
+    <!--::review_part start::-->
+    <section class="review_part gray_bg section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-xl-6">
+                    <div class="section_tittle">
+                        <p>Testimonials</p>
+                        <h2>happy customer says</h2>
+                        <span>Stars fowl deep she greater bearing to seed dont is let you're appear first thing saying
+                            it years abundantly fowl tree you shall also</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="client_review_part owl-carousel">
+                        {% for review in reviews%}
+                        <div class="client_review_single media">
+                            
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="client_img align-self-center">
+                                        <img src="{{review.image.url}}" alt="" style="height: 338px; width: 300px;">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-8">
+                                    <div class="client_review_text media-body">
+                                        <h4>{{review.fullname}} <span>{{review.designation}}</span></h4>
+                                        {% if review.rating == 5 %}
+                                        <div class="star_icon">
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                        </div>
+                                        {% elif review.rating == 4 %}
+                                        <div class="star_icon">
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                        </div>
+                                        {% elif review.rating == 3%}
+                                        <div class="star_icon">
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                        </div>
+                                        {% elif review.rating == 2%}
+                                        <div class="star_icon">
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_1.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                        </div>
+                                        {% elif review.rating == 1%}
+                                        <div class="star_icon">
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                        </div>
+                                        {% else %}
+                                        <div class="star_icon">
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                            <a href="#"> <img src="{% static 'user/img/icon/star_2.svg' %}" alt=""> </a>
+                                        </div>
+                                        {% endif %}
+                                        <p>{{review.message}}</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div> 
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay_icon">
+            <img src="{% static 'user/img/animate_icon/icon_6.png' %}" class="amitated_icon_6" alt="animate_icon">
+        </div>
+    </section>
+    <!--::review_part end::-->
+
+
+
+    <!--::exclusive_item_part start::-->
+    <section class="team_member_section section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-xl-6">
+                    <div class="section_tittle">
+                        <p>our team</p>
+                        <h2>Meet with Teams</h2>
+                        <span>Stars fowl deep she greater bearing to seed dont is let you're appear first thing saying
+                            it years abundantly fowl tree you shall also</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center">
+                {% for team in teams%}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="{{team.image.url}}" alt="" style="height: 400px; width: 100%;">
+                        </div>
+                        <div class="single_blog_text">
+                            <h3>{{team.fname}} {{team.lname}}</h3>
+                            <p>{{team.position}}</p>
+                            <p>{{team.experience}} years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--::exclusive_item_part end::-->
+
+
+
+
+
+{% endblock %}
