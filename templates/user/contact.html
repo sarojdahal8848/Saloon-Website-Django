@@ -39,11 +39,11 @@
               {% csrf_token %}
               <div class="form-group">
                 <label for="name">Full Name:</label>
-                <input type="text" class="form-control col-lg-4" name="name">
+                <input type="text" class="form-control col-lg-4" name="name" required>
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" class="form-control col-lg-4" name="email">
+                <input type="email" class="form-control col-lg-4" name="email" required>
               </div>
               <div class="form-group">
                 <label for="subject">Subject:</label>
@@ -51,7 +51,7 @@
               </div>
               <div class="form-group">
                 <label for="subject">Message:</label>
-                <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+                <textarea name="message" class="form-control" cols="30" rows="10" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary">
